@@ -134,7 +134,7 @@ void CLADDoc::Serialize(CArchive& ar)
 		CIO * io;
 		m_pointArray.Serialize(ar);
 
-		//µÚÒ»¸öÊÇCIOËùÒÔ´Ó1¿ªÊ¼
+		//ç¬¬ä¸€ä¸ªæ˜¯CIOæ‰€ä»¥ä»Ž1å¼€å§‹
 		for (int n=1;n<m_pointArray.GetSize();n++)
 		{
 			io=(CIO*)m_pointArray.GetAt(n);
@@ -271,12 +271,12 @@ void CLADDoc::insert_point(UINT pID, int x, int y, int row, int col, CDC *pDC)
 		    point->setfiveflag(5);
 		    point->setcode("ERECT");
 		    break;
-        case 52:						// HOR Îª¿Õ£¨Ö±Á¬¹ØÏµ£©
+        case 52:						// HOR ä¸ºç©ºï¼ˆç›´è¿žå…³ç³»ï¼‰
    	        point=new HOR;
 			point->setflag(6);
 			point->setcode("HOR");			
 			break;    
-	    case 6:							// OUT Ö¸Áî
+	    case 6:							// OUT æŒ‡ä»¤
 		    point=new OUTPOINT;				
 		    point->setflag(7);
 		    point->setcode("OUT");
@@ -315,7 +315,7 @@ void CLADDoc::insert_point(UINT pID, int x, int y, int row, int col, CDC *pDC)
 		{
 			POSITION pos=this->GetFirstViewPosition();
 			CView * pView=this->GetNextView(pos);
-			pView->MessageBox("¿ÉÄÜÌÝÐÎÍ¼»æÖÆÓÐ´í¡¢»òÔªÆ÷¼þÉèÖÃ´íÎó\n\nÇë½«ÎÄ¼þ±£´æ¹Ø±ÕºóÖØÐÂ´ò¿ªÄÜ½â¾öÎÊÌâ¡£\n\nÈôÈÔ´æÔÚÎÊÌâ£¬ÇëÓë¿ª·¢ÉÌÁªÏµ¡£","»æÖÆ³ö´í",MB_ICONERROR|MB_OK);
+			pView->MessageBox("å¯èƒ½æ¢¯å½¢å›¾ç»˜åˆ¶æœ‰é”™ã€æˆ–å…ƒå™¨ä»¶è®¾ç½®é”™è¯¯\n\nè¯·å°†æ–‡ä»¶ä¿å­˜å…³é—­åŽé‡æ–°æ‰“å¼€èƒ½è§£å†³é—®é¢˜ã€‚\n\nè‹¥ä»å­˜åœ¨é—®é¢˜ï¼Œè¯·ä¸Žå¼€å‘å•†è”ç³»ã€‚","ç»˜åˆ¶å‡ºé”™",MB_ICONERROR|MB_OK);
 		}
 	}
 	this->SetModifiedFlag();
@@ -323,27 +323,27 @@ void CLADDoc::insert_point(UINT pID, int x, int y, int row, int col, CDC *pDC)
 
 
 /*
-	 ²Ëµ¥±àÒë ¡ª¡ª Éú³ÉÖ¸Áî
+	 èœå•ç¼–è¯‘ â€”â€” ç”ŸæˆæŒ‡ä»¤
 */
 void CLADDoc::OnCompileLad() 
 {
 	// TODO: Add your command handler code here
-	CString pathname=this->GetPathName();			//  »ñÈ¡ÎÄ¼þÂ·¾¶
+	CString pathname=this->GetPathName();			//  èŽ·å–æ–‡ä»¶è·¯å¾„
 	if (pathname=="")		
 	{
-		AfxMessageBox("ÇëÏÈ±£´æÎÄ¼þ£¬ÔÙ½øÐÐ±àÒë£¡");
+		AfxMessageBox("è¯·å…ˆä¿å­˜æ–‡ä»¶ï¼Œå†è¿›è¡Œç¼–è¯‘ï¼");
 		return ;
 	}
-	this->OnSaveDocument(pathname);					// ±£´æÎÄµµ
+	this->OnSaveDocument(pathname);					// ä¿å­˜æ–‡æ¡£
 	::filename=pathname+this->GetTitle();
 	int i=::filename.Find('.');
 	if (i!=-1)
 		::filename=::filename.Mid(0,i);
-	::filename+=".plc";								// ±£´æÎªPLCºó×º
+	::filename+=".plc";								// ä¿å­˜ä¸ºPLCåŽç¼€
 	CString str;	
 	try{
 		if (!m_mPlc.compiled(str))
-			str.Format("±àÒë³É¹¦!");
+			str.Format("ç¼–è¯‘æˆåŠŸ!");
 		if (err_dlg)
 		{
 			err_dlg->Refresh(str);
@@ -362,7 +362,7 @@ void CLADDoc::OnCompileLad()
 	{
 		POSITION pos=this->GetFirstViewPosition();
 		CView * pView=this->GetNextView(pos);
-		pView->MessageBox("¿ÉÄÜÌÝÐÎÍ¼»æÖÆÓÐ´í¡¢\n»òÎÄ¼þ²»ÄÜ½¨Á¢","±àÒë³ö´í",MB_ICONERROR|MB_OK);
+		pView->MessageBox("å¯èƒ½æ¢¯å½¢å›¾ç»˜åˆ¶æœ‰é”™ã€\næˆ–æ–‡ä»¶ä¸èƒ½å»ºç«‹","ç¼–è¯‘å‡ºé”™",MB_ICONERROR|MB_OK);
 	}
 }
 
@@ -403,7 +403,7 @@ void CLADDoc::Process(UINT pID, int x, int y, CDC *pDC)
 			{
 				POSITION pos=this->GetFirstViewPosition();
 				CView * pView=this->GetNextView(pos);
-				pView->MessageBox("²Á³ý´íÎó£¡¿ÉÄÜÌÝÐÎÍ¼»æÖÆÓÐ´í\n\nÇë½«ÎÄ¼þ±£´æ¹Ø±ÕºóÖØÐÂ´ò¿ªÄÜ½â¾öÎÊÌâ¡£\n\nÈôÈÔ´æÔÚÎÊÌâ£¬ÇëÓë¿ª·¢ÉÌÁªÏµ¡£","²Á³ý³ö´í",MB_ICONERROR|MB_OK);
+				pView->MessageBox("æ“¦é™¤é”™è¯¯ï¼å¯èƒ½æ¢¯å½¢å›¾ç»˜åˆ¶æœ‰é”™\n\nè¯·å°†æ–‡ä»¶ä¿å­˜å…³é—­åŽé‡æ–°æ‰“å¼€èƒ½è§£å†³é—®é¢˜ã€‚\n\nè‹¥ä»å­˜åœ¨é—®é¢˜ï¼Œè¯·ä¸Žå¼€å‘å•†è”ç³»ã€‚","æ“¦é™¤å‡ºé”™",MB_ICONERROR|MB_OK);
 			}
 			return;
 		}

@@ -1,117 +1,124 @@
-========================================================================
-       MICROSOFT FOUNDATION CLASS LIBRARY : MUL
-========================================================================
+//{{NO_DEPENDENCIES}}
+// Microsoft Visual C++ 生成的包含文件。
+// 供 MUL.rc 使用
+//
+#define IDD_ABOUTBOX                    100
+#define IDB_SPLASH                      102
+#define IDR_MAINFRAME                   128
+#define IDR_MULTYPE                     129
+#define IDR_LADDER                      130
+#define IDC_LD                          133
+#define IDC_LDI                         134
+#define IDC_OR                          135
+#define IDC_ORI                         136
+#define IDD_WORKARESET                  136
+#define IDC_OUT                         137
+#define IDC_ADDITION                    138
+#define IDR_DRAWTYPE                    144
+#define IDB_BITMAP1                     152
+#define IDB_BITMAP2                     153
+#define IDR_ITEMMENU                    154
+#define IDR_ACCELERATOR1                156
+#define IDB_BITMAP3                     158
+#define IDD_SYNTAX                      159
+#define IDD_POINTSET                    160
+#define IDD_DLG_COMMUNICATION           161
+#define IDD_DIG_COMPILE                 162
+#define IDD_DLG_OPENCOM                 165
+#define IDD_DLG_SETTINGCOM              166
+#define IDC_WORKARE_WIDTH               1000
+#define IDC_WORKARE_HIGH                1001
+#define IDC_BTN_PLCTOTXT                1001
+#define IDC_PAGEHIGH                    1002
+#define IDC_BTN_OPEN_DOWNLOADFILE       1002
+#define IDC_COMPILE                     1003
+#define IDC_PAGEWIDTH                   1003
+#define IDC_BTN_COMPILE                 1003
+#define IDC_ADDR                        1004
+#define IDC_NAME                        1005
+#define IDC_BTN_DOWNLOAD                1005
+#define IDC_NOTE                        1006
+#define IDC_EDIT_SHOWLOG                1006
+#define IDC_CAPTION                     1007
+#define IDC_BTN_OPEN_BINFILE            1007
+#define IDC_CHK_DELETEFILE              1008
+#define IDC_BTN_UPLOADTO                1009
+#define IDC_BTN_CONVERT                 1010
+#define IDC_BTN_UPLOAD                  1010
+#define IDC_BTN_DECOMPILE               1010
+#define IDC_SOURFILENAME                1011
+#define IDC_DECOMPILE                   1011
+#define IDC_BTN_SAVE_TXTFILE            1012
+#define IDC_COMBO_DOWNCOM               1013
+#define IDC_SOURFILENAME2               1013
+#define IDC_BTN_OPENCOM                 1014
+#define IDC_COMBO_UPCOM                 1015
+#define IDC_CHK_COM1                    1016
+#define IDC_CHK_COM2                    1017
+#define IDC_CHK_COM3                    1018
+#define IDC_BTN_SETTINGCOM1             1019
+#define IDC_BTN_SETTINGCOM2             1020
+#define IDC_COMBO_BAUD                  1020
+#define IDC_BTN_SETTINGCOM3             1021
+#define IDC_BTN_SETTINGCOM4             1022
+#define IDC_BTN_SETTINGCOM5             1023
+#define IDC_EDIT_MASTERSTATION          1024
+#define IDC_EDIT_SUBSTATION             1026
+#define IDC_BUTTON1                     1029
+#define IDC_BTN_PLC                     1029
+#define IDC_COMBO_DATABIT               1030
+#define IDC_BUTTON2                     1030
+#define IDC_BTN_BIN                     1030
+#define IDC_COMBO_STOPBIT               1031
+#define IDC_EDIT1                       1031
+#define IDC_COMBO_CHECKSUM              1032
+#define IDC_EDIT2                       1032
+#define IDC_EDIT3                       1033
+#define IDC_DESTFILENAME                1036
+#define IDC_BTN_DECOMPIL                1037
+#define IDC_CHK_COM4                    1818
+#define ID_DRAW_FREE                    32771
+#define ID_DRAW_LD                      32772
+#define ID_DRAW_LDI                     32773
+#define ID_DRAW_OR                      32774
+#define ID_DRAW_ORI                     32775
+#define ID_DRAW_LINE                    32776
+#define ID_DRAW_OUT                     32777
+#define ID_DRAW_ADDITION                32778
+#define ID_DRAW_ERASE                   32779
+#define ID_VIEW_LADDER                  32784
+#define ID_VIEW_INSTRU                  32785
+#define ID_VIEW_ADDRESS                 32786
+#define ID_OPTION_WORKARE               32787
+#define ID_OPTION_FONT                  32788
+#define ID_OPTION_SETADDR               32791
+#define ID_COMPILE_LADD                 32793
+#define ID_COMPILE_LAD                  32794
+#define ID_SELECT_SET                   32795
+#define ID_SELECT_RST                   32796
+#define ID_SELECT_S                     32797
+#define ID_SELECT_R                     32798
+#define ID_SELECT_MC                    32799
+#define ID_SELECT_MCR                   32800
+#define ID_SELECT_K                     32801
+#define ID_SELECT_F                     32802
+#define ID_SELECT_CJP                   32803
+#define ID_SELECT_EJP                   32804
+#define ID_SELECT_PLS                   32805
+#define ID_SELECT_END                   32806
+#define ID_COMPILE_INSTR                32807
+#define ID_COMMUN_DOWNLOAD              32812
+#define ID_COMMUN_UPLOAD                32813
+#define ID_INDICATOR_MOUSE              59142
 
-
-AppWizard has created this MUL application for you.  This application
-not only demonstrates the basics of using the Microsoft Foundation classes
-but is also a starting point for writing your application.
-
-This file contains a summary of what you will find in each of the files that
-make up your MUL application.
-
-MUL.dsp
-    This file (the project file) contains information at the project level and
-    is used to build a single project or subproject. Other users can share the
-    project (.dsp) file, but they should export the makefiles locally.
-
-MUL.h
-    This is the main header file for the application.  It includes other
-    project specific headers (including Resource.h) and declares the
-    CMULApp application class.
-
-MUL.cpp
-    This is the main application source file that contains the application
-    class CMULApp.
-
-MUL.rc
-    This is a listing of all of the Microsoft Windows resources that the
-    program uses.  It includes the icons, bitmaps, and cursors that are stored
-    in the RES subdirectory.  This file can be directly edited in Microsoft
-	Visual C++.
-
-MUL.clw
-    This file contains information used by ClassWizard to edit existing
-    classes or add new classes.  ClassWizard also uses this file to store
-    information needed to create and edit message maps and dialog data
-    maps and to create prototype member functions.
-
-res\MUL.ico
-    This is an icon file, which is used as the application's icon.  This
-    icon is included by the main resource file MUL.rc.
-
-res\MUL.rc2
-    This file contains resources that are not edited by Microsoft 
-	Visual C++.  You should place all resources not editable by
-	the resource editor in this file.
-
-
-
-/////////////////////////////////////////////////////////////////////////////
-
-For the main frame window:
-
-MainFrm.h, MainFrm.cpp
-    These files contain the frame class CMainFrame, which is derived from
-    CMDIFrameWnd and controls all MDI frame features.
-
-res\Toolbar.bmp
-    This bitmap file is used to create tiled images for the toolbar.
-    The initial toolbar and status bar are constructed in the CMainFrame
-    class. Edit this toolbar bitmap using the resource editor, and
-    update the IDR_MAINFRAME TOOLBAR array in MUL.rc to add
-    toolbar buttons.
-/////////////////////////////////////////////////////////////////////////////
-
-For the child frame window:
-
-ChildFrm.h, ChildFrm.cpp
-    These files define and implement the CChildFrame class, which
-    supports the child windows in an MDI application.
-
-/////////////////////////////////////////////////////////////////////////////
-
-AppWizard creates one document type and one view:
-
-MULDoc.h, MULDoc.cpp - the document
-    These files contain your CMULDoc class.  Edit these files to
-    add your special document data and to implement file saving and loading
-    (via CMULDoc::Serialize).
-
-MULView.h, MULView.cpp - the view of the document
-    These files contain your CMULView class.
-    CMULView objects are used to view CMULDoc objects.
-
-res\MULDoc.ico
-    This is an icon file, which is used as the icon for MDI child windows
-    for the CMULDoc class.  This icon is included by the main
-    resource file MUL.rc.
-
-
-/////////////////////////////////////////////////////////////////////////////
-Other standard files:
-
-StdAfx.h, StdAfx.cpp
-    These files are used to build a precompiled header (PCH) file
-    named MUL.pch and a precompiled types file named StdAfx.obj.
-
-Resource.h
-    This is the standard header file, which defines new resource IDs.
-    Microsoft Visual C++ reads and updates this file.
-
-/////////////////////////////////////////////////////////////////////////////
-Other notes:
-
-AppWizard uses "TODO:" to indicate parts of the source code you
-should add to or customize.
-
-If your application uses MFC in a shared DLL, and your application is 
-in a language other than the operating system's current language, you
-will need to copy the corresponding localized resources MFC42XXX.DLL
-from the Microsoft Visual C++ CD-ROM onto the system or system32 directory,
-and rename it to be MFCLOC.DLL.  ("XXX" stands for the language abbreviation.
-For example, MFC42DEU.DLL contains resources translated to German.)  If you
-don't do this, some of the UI elements of your application will remain in the
-language of the operating system.
-
-/////////////////////////////////////////////////////////////////////////////
+// Next default values for new objects
+// 
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+#define _APS_3D_CONTROLS                     1
+#define _APS_NEXT_RESOURCE_VALUE        167
+#define _APS_NEXT_COMMAND_VALUE         32814
+#define _APS_NEXT_CONTROL_VALUE         1038
+#define _APS_NEXT_SYMED_VALUE           103
+#endif
+#endif

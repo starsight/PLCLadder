@@ -22,7 +22,7 @@ CSyntax::CSyntax(CString str,CWnd* pParent /*=NULL*/)
 	m_strList = _T("");
 	//}}AFX_DATA_INIT
 	if (!this->Create(CSyntax::IDD,pParent))
-		AfxMessageBox("²»ÄÜ½¨Á¢±àÒë¶Ô»°¿ò!");
+		AfxMessageBox("ä¸èƒ½å»ºç«‹ç¼–è¯‘å¯¹è¯æ¡†!");
 	m_strList=str;
 }
 

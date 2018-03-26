@@ -1,69 +1,68 @@
-// MainFrm.cpp : implementation of the CMainFrame class
+// MainFrm.h : interface of the CMainFrame class
 //
+/////////////////////////////////////////////////////////////////////////////
 
-#include "stdafx.h"
-#include "MUL.h"
+#if !defined(AFX_MAINFRM_H__AF535049_B01D_11D4_8B78_5254AB1F6EC3__INCLUDED_)
+#define AFX_MAINFRM_H__AF535049_B01D_11D4_8B78_5254AB1F6EC3__INCLUDED_
 
-#include "MainFrm.h"
-#include "Splash.h"
+#if _MSC_VER > 1000
+#pragma once
+#endif // _MSC_VER > 1000
 
+class CMainFrame : public CMDIFrameWnd
+{
+	DECLARE_DYNAMIC(CMainFrame)
+public:
+	CMainFrame();
+
+// Attributes
+public:
+
+// Operations
+public:
+
+// Overrides
+	// ClassWizard generated virtual function overrides
+	//{{AFX_VIRTUAL(CMainFrame)
+	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
+	//}}AFX_VIRTUAL
+
+// Implementation
+public:
+	void SetMousePosText(CString strText);
+	virtual ~CMainFrame();
+	
 #ifdef _DEBUG
-#define new DEBUG_NEW
-#undef THIS_FILE
-static char THIS_FILE[] = __FILE__;
+	virtual void AssertValid() const;
+	virtual void Dump(CDumpContext& dc) const;
 #endif
 
-/////////////////////////////////////////////////////////////////////////////
-// CMainFrame
+protected:  // control bar embedded members
+	CStatusBar  m_wndStatusBar;
+	CToolBar    m_wndToolBar;
+	CToolBar	m_wndDrawTool;
+// Generated message map functions
+protected:
+	//{{AFX_MSG(CMainFrame)
+	afx_msg int  OnCreate(LPCREATESTRUCT lpCreateStruct);
+	afx_msg void OnCommunDownload();
+	afx_msg void OnCommunUpload();
+	//}}AFX_MSG
+	//afx_msg void OnUpdateMousePos(CCmdUI *pCmdUI);
+	DECLARE_MESSAGE_MAP()
 
-IMPLEMENT_DYNAMIC(CMainFrame, CMDIFrameWnd)
-
-BEGIN_MESSAGE_MAP(CMainFrame, CMDIFrameWnd)
-	//{{AFX_MSG_MAP(CMainFrame)
-	ON_WM_CREATE()
-	ON_COMMAND(ID_COMMUN_DOWNLOAD, OnCommunDownload)
-	ON_COMMAND(ID_COMMUN_UPLOAD, OnCommunUpload)
-	//}}AFX_MSG_MAP
-	//ON_UPDATE_COMMAND_UI(ID_INDICATOR_MOUSE,OnUpdateMousePos)
-END_MESSAGE_MAP()
-
-static UINT indicators[] =
-{
-	ID_SEPARATOR,           // status line indicator
-	ID_INDICATOR_MOUSE,
-	ID_INDICATOR_CAPS,
-	ID_INDICATOR_NUM,
-	ID_INDICATOR_SCRL,
+public:
+	//TRUE:  ä¸‹è½½
+	//FALSEE:ä¸Šè½½
+	BOOL m_bDownload;
 };
 
 /////////////////////////////////////////////////////////////////////////////
-// CMainFrame construction/destruction
 
-CMainFrame::CMainFrame()
-{
-	// TODO: add member initialization code here
-	m_bDownload = TRUE;
-	
-}
+//{{AFX_INSERT_LOCATION}}
+// Microsoft Visual C++ will insert additional declarations immediately before the previous line.
 
-CMainFrame::~CMainFrame()
-{
-}
-
-int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
-{
-	if (CMDIFrameWnd::OnCreate(lpCreateStruct) == -1)
-		return -1;
-	
-	if (!m_wndToolBar.CreateEx(this, TBSTYLE_FLAT, WS_CHILD | WS_VISIBLE | CBRS_TOP
-		| CBRS_GRIPPER | CBRS_TOOLTIPS | CBRS_FLYBY | CBRS_SIZE_DYNAMIC) ||
-		!m_wndToolBar.LoadToolBar(IDR_MAINFRAME))
-	{
-		TRACE0("Failed to create toolbar\n");
-		return -1;      // fail to create
-	}
-
-	if (!m_wndDrawTool.CreateEx(this, TBSTYLE_FLAT, WS_CHILD | WS_VISIBLE | CBRS_TOP
+#endif // !defined(AFX_MAINFRM_H__AF535049_B01D_11D4_8B78_5254AB1F6EC3__INCLUDED_)
 		| CBRS_GRIPPER | CBRS_TOOLTIPS | CBRS_FLYBY | CBRS_SIZE_DYNAMIC) ||
 		!m_wndDrawTool.LoadToolBar(IDR_DRAWTYPE))
 	{
@@ -81,12 +80,12 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 
 	// TODO: Delete these three lines if you don't want the toolbar to
 	//  be dockable
-	m_wndToolBar.SetWindowText("ÏµÍ³¹¤¾ß");
+	m_wndToolBar.SetWindowText("ç³»ç»Ÿå·¥å…·");
 	m_wndToolBar.EnableDocking(CBRS_ALIGN_ANY);
 	EnableDocking(CBRS_ALIGN_ANY);
 	DockControlBar(&m_wndToolBar);
 
-	m_wndDrawTool.SetWindowText("»æÍ¼¹¤¾ß");
+	m_wndDrawTool.SetWindowText("ç»˜å›¾å·¥å…·");
 	m_wndDrawTool.EnableDocking(CBRS_ALIGN_ANY);
 	EnableDocking(CBRS_ALIGN_ANY);
 	DockControlBar(&m_wndDrawTool);

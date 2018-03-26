@@ -115,7 +115,7 @@ void CLADView::OnInitialUpdate()
 					  CLIP_DEFAULT_PRECIS,
 					  DEFAULT_QUALITY,
 					  DEFAULT_PITCH|FF_MODERN,
-					  "ËÎÌå");
+					  "å®‹ä½“");
 	m_pMemDc->SelectObject(&myFont);
 	m_pMemDc->SetTextColor(RGB(0,0,0));
 	CPen drawpen;

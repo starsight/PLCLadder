@@ -8,7 +8,7 @@ class CIO:public CObject
 {
 	DECLARE_SERIAL(CIO);
 public:
-	virtual void Serialize(CArchive &ar);	// ÎÄµµ´®ĞĞ»¯
+	virtual void Serialize(CArchive &ar);	// æ–‡æ¡£ä¸²è¡ŒåŒ–
 	CString name;
 	CString addr;
 	CString code;
@@ -26,19 +26,19 @@ class IOPOINT:public CObject
 	friend class LIST;
 	friend class PLC;
 protected:
-	CString name;			// Ôª¼şÃû³Æ
-	CString code;			// Ôª¼şÉú³ÉµÄ´úÂë()
-	CString addr;			// Ôª¼şµØÖ·(²Ù×÷Êı)
-	int  xpoint,ypoint;		// Ôª¼şx¡¢y×ø±ê
-	int  flag;				// ÉÏÏÂ×óÓÒÁ¬½Ó¹ØÏµ
-	int  fiveflag;			// Í¼·ûµÄË÷ÒıºÅ£¬Í¼·ûµÄÎ¨Ò»±ê¼Ç
+	CString name;			// å…ƒä»¶åç§°
+	CString code;			// å…ƒä»¶ç”Ÿæˆçš„ä»£ç ()
+	CString addr;			// å…ƒä»¶åœ°å€(æ“ä½œæ•°)
+	int  xpoint,ypoint;		// å…ƒä»¶xã€yåæ ‡
+	int  flag;				// ä¸Šä¸‹å·¦å³è¿æ¥å…³ç³»
+	int  fiveflag;			// å›¾ç¬¦çš„ç´¢å¼•å·ï¼Œå›¾ç¬¦çš„å”¯ä¸€æ ‡è®°
 	BOOL visit;				// 
-	IOPOINT *right;			// Á´±íÏòÓÒ
-	IOPOINT *down;			// Á´±íÏòÏÂ
-	IOPOINT *left;			// Á´±íÏò×ó
-	IOPOINT *up;			// Á´±íÏòÉÏ
-	IOPOINT *unup;			// Ñ¹Õ»²Ù×÷
-	IOPOINT *undown;		// Î´ÖªÍ¼·û
+	IOPOINT *right;			// é“¾è¡¨å‘å³
+	IOPOINT *down;			// é“¾è¡¨å‘ä¸‹
+	IOPOINT *left;			// é“¾è¡¨å‘å·¦
+	IOPOINT *up;			// é“¾è¡¨å‘ä¸Š
+	IOPOINT *unup;			// å‹æ ˆæ“ä½œ
+	IOPOINT *undown;		// æœªçŸ¥å›¾ç¬¦
 public:
 	IOPOINT(int x,int y,int fl,CString cd="",CString nm="",CString ad="")
 	{
@@ -78,11 +78,11 @@ public:
 	{
 		name=ioname;
 	}	
-	void setaddr(const CString ioaddr)		// ÉèÖÃµØÖ·
+	void setaddr(const CString ioaddr)		// è®¾ç½®åœ°å€
 	{
 		addr=ioaddr;
 	}
-	void setcode(const CString iocode)		// ÉèÖÃÉú³ÉµÄÖ¸Áî
+	void setcode(const CString iocode)		// è®¾ç½®ç”Ÿæˆçš„æŒ‡ä»¤
 	{
 		code=iocode;
 	}
@@ -103,11 +103,11 @@ public:
 		xpoint=x;
 		ypoint=y;
 	}
-	void getname(CString *result_name)	// »ñÈ¡Ôª¼şÃû³Æ
+	void getname(CString *result_name)	// è·å–å…ƒä»¶åç§°
 	{
 		*result_name=name;
 	}
-	void getaddr(CString *result_addr)	// »ñÈ¡ÎŞ¼şµØÖ·
+	void getaddr(CString *result_addr)	// è·å–æ— ä»¶åœ°å€
 	{
 		*result_addr=addr;
 	}

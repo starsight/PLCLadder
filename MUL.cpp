@@ -122,8 +122,8 @@ BOOL CMULApp::InitInstance()
 		return FALSE;
 	m_pMainWnd = pMainFrame;
 
-    this->EnableShellOpen();				//ÔÚÓÒ¼üÐÂ½¨ÖÐ×¢²á
-    this->RegisterShellFileTypes(TRUE);		//×¢²áÎÄµµÀà
+    this->EnableShellOpen();				//åœ¨å³é”®æ–°å»ºä¸­æ³¨å†Œ
+    this->RegisterShellFileTypes(TRUE);		//æ³¨å†Œæ–‡æ¡£ç±»
 
 	// Parse command line for standard shell commands, DDE, file open
 	CCommandLineInfo cmdInfo;

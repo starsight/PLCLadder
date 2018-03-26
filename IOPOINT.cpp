@@ -23,7 +23,7 @@ CIO::CIO()
 }
 
 /*
-	IOPOINT ÅÐ¶ÏÎÞ¼þµØÖ·ÊÇ·ñÓÐÐ§
+	IOPOINT åˆ¤æ–­æ— ä»¶åœ°å€æ˜¯å¦æœ‰æ•ˆ
 */
 int IOPOINT::testaddr()
 {
@@ -1182,13 +1182,13 @@ int PLC::syntax(CString &m_strlist)
 		if (outflag!=1)
 		{
 			result=1;
-			str.Format("µÚ %d ³ÌÐò¶ÎÊä³öÓï¾ä´íÎó!\r\n",i+1);
+			str.Format("ç¬¬ %d ç¨‹åºæ®µè¾“å‡ºè¯­å¥é”™è¯¯!\r\n",i+1);
 			m_strlist+=str;
 		}
 		if (topflag)
 		{
 			result=1;
-			str.Format("µÚ %d ³ÌÐò¶ÎÊ×ÐÐº¬ÓÐ %d ¸öOR¡¢ORI»òERECT½áµã!\r\n",i+1,topflag);
+			str.Format("ç¬¬ %d ç¨‹åºæ®µé¦–è¡Œå«æœ‰ %d ä¸ªORã€ORIæˆ–ERECTç»“ç‚¹!\r\n",i+1,topflag);
 			m_strlist+=str;
 		}
 	}
@@ -1208,28 +1208,28 @@ int PLC::syntax(CString &m_strlist)
 				&& (point_array[i][j]->right==NULL))
 			{
 				result=1;
-				str.Format("µÚ %d ÐÐ£¬µÚ %d ÁÐÊÇ¹ÂÁ¢½áµã!\r\n",i+1,j+1);
+				str.Format("ç¬¬ %d è¡Œï¼Œç¬¬ %d åˆ—æ˜¯å­¤ç«‹ç»“ç‚¹!\r\n",i+1,j+1);
 				m_strlist+=str;
 			}
 			if ((flag==0 && fiveflag!=5 && fiveflag!=9)
 				|| flag==100)
 			{
 				result=1;
-				str.Format("µÚ %d ÐÐ£¬µÚ %d ÁÐ½áµãÀàÐÍ´íÎó!\r\n",i+1,j+1);
+				str.Format("ç¬¬ %d è¡Œï¼Œç¬¬ %d åˆ—ç»“ç‚¹ç±»åž‹é”™è¯¯!\r\n",i+1,j+1);
 				m_strlist+=str;
 			}
 			if (addr.GetLength()==0 && flag!=0 && flag!=6 
 				&& flag!=12 && flag!=13 && flag!=15)
 			{
 				result=1;
-				str.Format("µÚ %d ÐÐ£¬µÚ %d ÁÐ½áµãÃ»½øÐÐÔªÆ÷¼þÉèÖÃ!\r\n",i+1,j+1);
+				str.Format("ç¬¬ %d è¡Œï¼Œç¬¬ %d åˆ—ç»“ç‚¹æ²¡è¿›è¡Œå…ƒå™¨ä»¶è®¾ç½®!\r\n",i+1,j+1);
 				m_strlist+=str;
 			}
 			point_array[i][j]->getcode(&addr);
 			if ((flag==12 || flag==13) && addr.GetLength()!=4)
 			{
 				result=1;
-				str.Format("µÚ %d ÐÐ£¬µÚ %d ÁÐ½áµãF¡¢KÃüÁî´íÎó!\r\n",i+1,j+1);
+				str.Format("ç¬¬ %d è¡Œï¼Œç¬¬ %d åˆ—ç»“ç‚¹Fã€Kå‘½ä»¤é”™è¯¯!\r\n",i+1,j+1);
 				m_strlist+=str;
 			}
 		}
@@ -1247,7 +1247,7 @@ int PLC::compiled(CString &m_strlist)
 		return flag;
 	if ((fp=fopen(::filename,"w+"))==NULL)
 	{
-		str.Format("ÎÄ¼þ%s²»ÄÜ½¨Á¢!\r\n",::filename);
+		str.Format("æ–‡ä»¶%sä¸èƒ½å»ºç«‹!\r\n",::filename);
 		m_strlist+=str;
         return 1;
 	}
@@ -1261,7 +1261,7 @@ int PLC::compiled(CString &m_strlist)
 		flag=list_array[i].compile(list_array[i].root);
 		if (flag)
 		{
-			str.Format("±àÒë´íÎó!\r\n");
+			str.Format("ç¼–è¯‘é”™è¯¯!\r\n");
 			m_strlist+=str;
 			return flag;
 		}
@@ -1277,7 +1277,7 @@ int PLC::compiled(CString &m_strlist)
 				if (point_array[i][j]->visit==FALSE
 					&& flag!=0 && flag!=6)
 				{
-					str.Format("µÚ %d ÐÐ£¬µÚ %d ÁÐ½áµãÃ»ÓÐ±àÒë!\r\n",i+1,j+1);
+					str.Format("ç¬¬ %d è¡Œï¼Œç¬¬ %d åˆ—ç»“ç‚¹æ²¡æœ‰ç¼–è¯‘!\r\n",i+1,j+1);
 					m_strlist+=str;
 					sum++;
 					if (sum==10)

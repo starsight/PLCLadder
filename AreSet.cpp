@@ -74,8 +74,8 @@ void CAreSet::OnShowWindow(BOOL bShow, UINT nStatus)
 	
 	// TODO: Add your message handler code here
 	CString str1,str2;
-	str1.Format("(%dÖÁ%dÖ®¼ä)",MinWidth,MaxWidth);
-	str2.Format("(%dÖÁ%dÖ®¼ä)",MinHigh,MaxHigh);
+	str1.Format("(%dè‡³%dä¹‹é—´)",MinWidth,MaxWidth);
+	str2.Format("(%dè‡³%dä¹‹é—´)",MinHigh,MaxHigh);
 	m_strPageWidth.SetWindowText(str1);
 	m_strPageHigh.SetWindowText(str2);
 }

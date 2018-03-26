@@ -29,17 +29,17 @@ CPointSet::CPointSet(IOPOINT *point,CWnd* pParent /*=NULL*/)
 	if (m_pPoint->getflag()==12)
 	{
 		m_nType=1;
-		m_Caption="Ö¸ÁîK£º";
+		m_Caption="æŒ‡ä»¤Kï¼š";
 	}
 	else if(m_pPoint->getflag()==13)
 	{
 		m_nType=2;
-		m_Caption="Ö¸ÁîF£º";
+		m_Caption="æŒ‡ä»¤Fï¼š";
 	}
 	else
 	{
 		m_nType=0;
-		m_Caption="µØ Ö·£º";
+		m_Caption="åœ° å€ï¼š";
 	}
 	m_pPoint->getaddr(&m_strAddr);
 	m_pPoint->getname(&m_strName);
@@ -93,13 +93,13 @@ void CPointSet::OnOK()
 	// TODO: Add extra validation here
 	if (m_pPoint!=NULL)
 	{
-		m_pPoint->setaddr(m_strAddr);		// ÉèÖÃÎÞ¼þµØÖ·
+		m_pPoint->setaddr(m_strAddr);		// è®¾ç½®æ— ä»¶åœ°å€
 		if (m_strAddr.GetLength()>0 && m_pPoint->testaddr())
 		{
 			if (m_nType)
-				AfxMessageBox("Ö¸Áî´íÎó£¡");
+				AfxMessageBox("æŒ‡ä»¤é”™è¯¯ï¼");
 			else
-				AfxMessageBox("µØÖ·´íÎó£¡");
+				AfxMessageBox("åœ°å€é”™è¯¯ï¼");
 			GetDlgItem(IDC_ADDR)->SetFocus();
 		}
 		else
