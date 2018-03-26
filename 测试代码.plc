@@ -1,0 +1,13 @@
+LD	X000		;
+LD	X001		;
+AND	M800		;
+AND	X000		;
+LDI	X222		;
+ANI	X333		;
+ORB
+ANB
+AND	X111		;
+OUT	Y000		;
+
+;***
+
