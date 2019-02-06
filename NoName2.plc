@@ -1,0 +1,17 @@
+LD	X001		;
+OR	X003		;
+ANI	X002		;
+LD	X004		;
+ANI	X005		;
+ORB
+LD	X012		;
+AND	X011		;
+OR	X010		;
+ANB
+LDI	X006		;
+ANI	X007		;
+ORB
+OUT	Y0		;
+
+;***
+

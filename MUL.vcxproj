@@ -137,6 +137,7 @@
   <ItemGroup>
     <ClCompile Include="AreSet.cpp" />
     <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="FindText.cpp" />
     <ClCompile Include="IOPOINT.cpp" />
     <ClCompile Include="LADDoc.cpp" />
     <ClCompile Include="LADView.cpp" />
@@ -160,6 +161,7 @@
   <ItemGroup>
     <ClInclude Include="AreSet.h" />
     <ClInclude Include="ChildFrm.h" />
+    <ClInclude Include="FindText.h" />
     <ClInclude Include="IOPOINT.h" />
     <ClInclude Include="LADDoc.h" />
     <ClInclude Include="LADView.h" />

@@ -54,6 +54,9 @@
     <ClCompile Include="Syntax.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FindText.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MUL.rc">
@@ -101,6 +104,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Syntax.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FindText.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

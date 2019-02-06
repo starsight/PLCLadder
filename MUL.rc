@@ -264,6 +264,8 @@ BEGIN
     POPUP "帮助(&H)"
     BEGIN
         MENUITEM "关于PLC(&A)...",                ID_APP_ABOUT
+        MENUITEM "查找",                          ID_32814
+        MENUITEM "替换",                          ID_32815
     END
 END
 
@@ -381,6 +383,27 @@ BEGIN
     LTEXT           "",IDC_PAGEHIGH,128,39,54,11,SS_CENTERIMAGE
 END
 
+IDD_DIALOG1 DIALOGEX 0, 0, 309, 149
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "查找"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "查找下一个",IDOK,179,120,50,14
+    PUSHBUTTON      "查找全部",IDCANCEL,235,120,50,14
+    EDITTEXT        IDC_EDIT1,111,15,142,14,ES_AUTOHSCROLL
+    LTEXT           "查找内容：",IDC_STATIC,57,17,41,8
+    GROUPBOX        "方向",IDC_STATIC,39,34,99,74
+    CONTROL         "向前",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,52,54,32,10
+    CONTROL         "向后",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,52,71,32,10
+    CONTROL         "从起始位置开始",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,52,89,72,10
+    GROUPBOX        "模式",IDC_STATIC,177,34,95,73
+    CONTROL         "按地址",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,198,54,40,10
+    CONTROL         "按名称",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,198,72,40,10
+    CONTROL         "按注释",IDC_RADIO6,"Button",BS_AUTORADIOBUTTON,198,90,40,10
+    CONTROL         "全词匹配",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,35,120,48,10
+    CONTROL         "匹配大小写",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,103,120,56,10
+END
+
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -462,6 +485,14 @@ BEGIN
         HORZGUIDE, 13
         HORZGUIDE, 39
     END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 302
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 142
+    END
 END
 #endif    // APSTUDIO_INVOKED
 
@@ -490,6 +521,11 @@ IDC_ADDITION            CURSOR                  "res\\cur00005.cur"
 //
 
 IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DIALOG1 AFX_DIALOG_LAYOUT
 BEGIN
     0
 END

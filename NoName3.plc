@@ -1,0 +1,9 @@
+LD	X002		;
+LD	X003		;
+OR	X004		;
+OR	X001		;
+ANB
+OUT	Y1		;
+
+;***
+

@@ -1,0 +1,16 @@
+LD	X001		;
+LD	X002		;
+AND	X003		;
+LD	X004		;
+AND	X005		;
+ORB
+OR	X006		;
+ANB
+AND	X007		;
+AND	X010		;
+OUT	Y0		;
+AND	X011		;
+OUT	Y1		;
+
+;***
+

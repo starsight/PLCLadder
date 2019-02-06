@@ -26,6 +26,7 @@
 #define IDD_DIG_COMPILE                 162
 #define IDD_DLG_OPENCOM                 165
 #define IDD_DLG_SETTINGCOM              166
+#define IDD_DIALOG1                     167
 #define IDC_WORKARE_WIDTH               1000
 #define IDC_WORKARE_HIGH                1001
 #define IDC_BTN_PLCTOTXT                1001
@@ -76,6 +77,14 @@
 #define IDC_EDIT3                       1033
 #define IDC_DESTFILENAME                1036
 #define IDC_BTN_DECOMPIL                1037
+#define IDC_RADIO1                      1038
+#define IDC_RADIO2                      1039
+#define IDC_RADIO3                      1040
+#define IDC_RADIO4                      1041
+#define IDC_RADIO5                      1042
+#define IDC_RADIO6                      1043
+#define IDC_CHECK1                      1044
+#define IDC_CHECK2                      1045
 #define IDC_CHK_COM4                    1818
 #define ID_DRAW_FREE                    32771
 #define ID_DRAW_LD                      32772
@@ -109,6 +118,8 @@
 #define ID_COMPILE_INSTR                32807
 #define ID_COMMUN_DOWNLOAD              32812
 #define ID_COMMUN_UPLOAD                32813
+#define ID_32814                        32814
+#define ID_32815                        32815
 #define ID_INDICATOR_MOUSE              59142
 
 // Next default values for new objects
@@ -116,9 +127,9 @@
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_3D_CONTROLS                     1
-#define _APS_NEXT_RESOURCE_VALUE        167
-#define _APS_NEXT_COMMAND_VALUE         32814
-#define _APS_NEXT_CONTROL_VALUE         1038
+#define _APS_NEXT_RESOURCE_VALUE        169
+#define _APS_NEXT_COMMAND_VALUE         32816
+#define _APS_NEXT_CONTROL_VALUE         1046
 #define _APS_NEXT_SYMED_VALUE           103
 #endif
 #endif

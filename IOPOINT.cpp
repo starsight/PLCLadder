@@ -859,6 +859,7 @@ void PLC::insert_point(IOPOINT *n)
 			}
 		}
 		point_array[i][j]=n;
+		//第一列数据会与上下两列数据建立默认或关系
 		if (j==0)
 		{
 			if ((i>0) && (point_array[i-1][j]!=NULL))
@@ -872,6 +873,7 @@ void PLC::insert_point(IOPOINT *n)
 				n->unup=point_array[i+1][j];
 			}
 		}
+		//非最后一列的节点与后一列建立关系
 		if (j<Cols-1)
 		{
 			if (point_array[i][j+1] != NULL)
@@ -901,6 +903,7 @@ void PLC::insert_point(IOPOINT *n)
 				point_array[i+1][j]->undown=n;
 			}
 		}
+		// 非第一列节点则与前一列建立关系
 		if (j>0)
 		{
 			if  (point_array[i][j-1] != NULL)

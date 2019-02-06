@@ -6,7 +6,7 @@
 
 #include "MainFrm.h"
 #include "Splash.h"
-
+#include "FindText.h"
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #undef THIS_FILE
@@ -25,6 +25,7 @@ BEGIN_MESSAGE_MAP(CMainFrame, CMDIFrameWnd)
 	ON_COMMAND(ID_COMMUN_UPLOAD, OnCommunUpload)
 	//}}AFX_MSG_MAP
 	//ON_UPDATE_COMMAND_UI(ID_INDICATOR_MOUSE,OnUpdateMousePos)
+	ON_COMMAND(ID_32814, &CMainFrame::On32814)
 END_MESSAGE_MAP()
 
 static UINT indicators[] =
@@ -147,4 +148,14 @@ void CMainFrame::OnCommunDownload()
 
 void CMainFrame::OnCommunUpload() 
 {
+}
+
+
+void CMainFrame::On32814()
+{
+	// TODO: 在此添加命令处理程序代码
+	// MessageBox("hello");
+
+	CFindText aboutDlg;
+	aboutDlg.DoModal();
 }
